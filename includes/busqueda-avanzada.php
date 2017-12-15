@@ -222,11 +222,13 @@ if(empty($_GET))
                             <p>Genero: <strong>'.$f['genero'].'</strong></p>
                             <p>País de origen: <strong>'.$f['nacionalidad'].'</strong></p>
                             <p>Fecha de Nacimiento: <strong>'.date('d/m/Y', $date).'</strong></p></br>
-                            <p>Financiando por:</br> <strong>'.$f['financiado_por'].'</strong></p></br>
-                            <p>Dirección:</br> <strong>'.$f['direccion'].'</strong></p></br>
-                            <p>Teléfono: <strong>'.$f['telefono'].'</strong></p>
-                            <p>Móvil: <strong>'.$f['movil'].'</strong></p></br>
+                            <p>País donde vive:</br> <strong>'.$f['pais_reside'].'</strong></p>
+                            <p>Ciudad:</br> <strong>'.$f['ciudad'].'</strong></p>
+                            <p>Dirección: <strong>'.$f['direccion'].'</strong></p>
+                            <p>Teléfono: <strong>'.$f['telefono'].'</strong> Móvil: <strong>'.$f['movil'].'</strong></p>
                             <p>Correo electrónico: <strong><a href="mailto:'.$f['email'].'">'.$f['email'].'</a></strong></p></br>
+                            <p>Financiando por:</br> <strong>'.$f['financiado_por'].'</strong></p>
+                            <p>Entidades:</br> <strong>'.$f['otras_entidades'].'</strong></p></br>
                             <p>Fallecido: <strong>'.$f['deceased'].'</strong></p>
                             <p>Fecha en que Falleció: <strong>'.date('d/m/Y', $datef).'</strong></p>
                           </div>

@@ -42,23 +42,23 @@
          </div>
          <div class="row">
            <div class="input-field col l3 m6 s12">
-             <input placeholder="" value="<?php echo $_GET['nickname']; ?>"  id="nickname" name="nickname" type="text" class="active validate" required>
+             <input placeholder="" value="<?php echo $_GET['nickname']; ?>"  id="nickname" name="nickname" type="text" class="active validate" >
              <label for="name"> Nickname </label>
           </div>
            <div class="input-field col l3 m6 s12">
-                <input placeholder="" value="<?php echo $_GET['direccion']; ?>"  id="direccion" name="direccion" type="text" class="active validate" required>
+                <input placeholder="" value="<?php echo $_GET['direccion']; ?>"  id="direccion" name="direccion" type="text" class="active validate" >
                 <label for="name"> Dirección actual </label>
              </div>
              <div class="input-field col l3 m6 s12">
-                <input placeholder="" value="<?php echo $_GET['email']; ?>"  id="email" name="email" type="email" class="active validate" required>
+                <input placeholder="" value="<?php echo $_GET['email']; ?>"  id="email" name="email" type="email" class="active validate" >
                 <label for="name"> Correo electrónico </label>
              </div>
              <div class="input-field col l3 m6 s12">
-                <input placeholder="" value="<?php echo $_GET['telefono']; ?>"  id="telefono" name="telefono" type="tel" class="active validate" required>
+                <input placeholder="" value="<?php echo $_GET['telefono']; ?>"  id="telefono" name="telefono" type="tel" class="active validate" >
                 <label for="name"> Número telefónico <span id="extTelefono">CC: </span></label>
              </div>
              <div class="input-field col l3 m6 s12">
-                <input placeholder="" value="<?php echo $_GET['movil']; ?>"  id="movil" name="movil" type="tel" class="active validate" required>
+                <input placeholder="" value="<?php echo $_GET['movil']; ?>"  id="movil" name="movil" type="tel" class="active validate" >
                 <label for="name"> Número celular <span id="extMovil">CC: </span></label>
              </div>
          </div>
@@ -133,17 +133,17 @@
         <div class="row">
             <div class="input-field col l4 m6 s12">
 
-                <input placeholder="" value="<?php echo $_GET['lugarPasantia']; ?>"  id="lugarPasantia" name="lugarPasantia" type="text" class="active validate" required>
+                <input placeholder="" value="<?php echo $_GET['lugarPasantia']; ?>"  id="lugarPasantia" name="lugarPasantia" type="text" class="active validate" >
                 <label for="name"> Lugar de pasantía </label>
             </div>
             <div class="input-field col l4 m6 s12">
 
-                <input placeholder="" value="<?php echo $_GET['exp_pasantia']; ?>"  id="exp_pasantia" name="exp_pasantia" type="text" class="active validate" required>
+                <input placeholder="" value="<?php echo $_GET['exp_pasantia']; ?>"  id="exp_pasantia" name="exp_pasantia" type="text" class="active validate" >
                 <label for="name"> Experiencia obtenida en su pasantía: </label>
             </div>
             <div class="input-field col l4 m6 s12">
 
-                <input placeholder="" value="<?php echo $_GET['titulo_tesis']; ?>"  id="titulo_tesis" name="titulo_tesis" type="text" class="active validate" required>
+                <input placeholder="" value="<?php echo $_GET['titulo_tesis']; ?>"  id="titulo_tesis" name="titulo_tesis" type="text" class="active validate" >
                 <label for="name"> Título del proyecto de graduación: </label>
             </div>
 
@@ -152,18 +152,18 @@
         <div class="row">
             <div class="input-field col l4 m6 s12">
 
-                <input placeholder="" value="<?php echo $_GET['asesor_tesis']; ?>"  id="asesor_tesis" name="asesor_tesis" type="text" class="active validate" required>
+                <input placeholder="" value="<?php echo $_GET['asesor_tesis']; ?>"  id="asesor_tesis" name="asesor_tesis" type="text" class="active validate" >
                 <label for="name"> Asesor de Tesis </label>
             </div>
 
              <div class="input-field col l4 m6 s12">
 
-                <input placeholder="" value="<?php echo $_GET['url_tesis']; ?>"  id="url_tesis" name="url_tesis" type="url" class="active validate" required>
+                <input placeholder="" value="<?php echo $_GET['url_tesis']; ?>"  id="url_tesis" name="url_tesis" type="url" class="active validate" >
                 <label for="name"> URL Tesis</label>
             </div>
             <div class="input-field col l4 m6 s12">
 
-                <input placeholder="" value="<?php echo $_GET['area_interes']; ?>"  id="area_interes" name="area_interes" type="text" class="active validate" required>
+                <input placeholder="" value="<?php echo $_GET['area_interes']; ?>"  id="area_interes" name="area_interes" type="text" class="active validate" >
                 <label for="name"> Area de interes </label>
             </div>
         </div>
@@ -172,7 +172,7 @@
         <div class="row">
             <div class="input-field col l4 m6 s12">
 
-                <input placeholder="" value="<?php echo $_GET['financiado_por']; ?>"  id="financiado_por" name="financiado_por" type="text" class="active validate" required>
+                <input placeholder="" value="<?php echo $_GET['financiado_por']; ?>"  id="financiado_por" name="financiado_por" type="text" class="active validate" >
                 <label for="name"> Financiado por: </label>
             </div>
 
