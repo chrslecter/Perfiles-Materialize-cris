@@ -42,6 +42,14 @@
          </div>
          <div class="row">
            <div class="input-field col l3 m6 s12">
+             <input placeholder="" value="<?php echo $_GET['pais_reside']; ?>"  id="pais_reside" name="pais_reside" type="text" class="active validate">
+             <label for="name"> País donde reside </label>
+          </div>
+          <div class="input-field col l3 m6 s12">
+            <input placeholder="" value="<?php echo $_GET['ciudad']; ?>"  id="ciudad" name="ciudad" type="text" class="active validate">
+            <label for="name"> Ciudad </label>
+         </div>
+           <div class="input-field col l3 m6 s12">
              <input placeholder="" value="<?php echo $_GET['nickname']; ?>"  id="nickname" name="nickname" type="text" class="active validate" >
              <label for="name"> Nickname </label>
           </div>
