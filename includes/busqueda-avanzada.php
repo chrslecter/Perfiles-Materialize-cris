@@ -45,15 +45,89 @@ if(empty($_GET))
                 }
             break;
             case 'carreraInput':
-              $carrera=$value;
-                if ($carrera=='0777' || $carrera=='07771' || $carrera=='07772' || $carrera=='07773' || $carrera=='07774' || $carrera=='077741') {
-                  $carrera='0777';
-                }
-                if ($query=="") {
-                  $query= $query." programa LIKE '%".$carrera."%'";
-                }else{
-                $query= $query." AND programa LIKE '%".$carrera."%'";
-                }
+      // if ($value=='0777' || $value=='07771' || $value=='07772' || $value=='07773' || $value=='07774' || $value=='077711' || $value=='077721' || $value=='077731' || $value=='077741') { $carrera='0777'; }
+
+      switch ($value) {
+        case '07771':
+            $carrera='0777';
+           if ($query=="") {
+              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'INGENIERIA AGRONOMICA'";
+            }else{
+            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'INGENIERIA AGRONOMICA'";
+            }
+          break;
+        case '07772':
+            $carrera='0777';
+           if ($query=="") {
+              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'AGROINDUSTRIA ALIMENTARIA'";
+            }else{
+            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'AGROINDUSTRIA ALIMENTARIA'";
+            }
+          break;
+        case '07773':
+            $carrera='0777';
+           if ($query=="") {
+              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'ADMINISTRACION DE AGRONEGOCIOS'";
+            }else{
+            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'ADMINISTRACION DE AGRONEGOCIOS'";
+            }
+          break;
+        case '07774':
+            $carrera='0777';
+           if ($query=="") {
+              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'AMBIENTE Y DESARROLLO'";
+            }else{
+            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'AMBIENTE Y DESARROLLO'";
+            }
+          break;
+        case '077721':
+            $carrera='0777';
+           if ($query=="") {
+              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'AGROINDUSTRIA'";
+            }else{
+            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'AGROINDUSTRIA'";
+            }
+          break;
+        case '077731':
+            $carrera='0777';
+           if ($query=="") {
+              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'GESTION DE AGRONEGOCIOS'";
+            }else{
+            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'GESTION DE AGRONEGOCIOS'";
+            }
+          break;
+        case '077741':
+            $carrera='0777';
+           if ($query=="") {
+              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'DESARROLLO SOCIOECONOMICO Y AMBIENTE'";
+            }else{
+            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'DESARROLLO SOCIOECONOMICO Y AMBIENTE'";
+            }
+          break;
+          default:
+           $carrera=$value;
+            if ($query=="") {
+                $query= $query." programa LIKE '%".$carrera."%'";
+              }else{
+              $query= $query." AND programa LIKE '%".$carrera."%'";
+              }
+            break;
+
+
+      }
+
+
+
+// value="07771">INGENIERIA AGRONOMICA</option>
+// value="07772">INGENIERO EN AGROINDUSTRIA
+// value="07773">INGENIERO EN ADMINISTRACION DE
+// value="07774">INGENIERO EN AMBIENTE Y
+// value="077711">INGENIERIA AGRONOMICA</option>
+// value="077721">AGROINDUSTRIA</option>
+// value="077731">GESTION DE AGRONEGOCIOS</option
+// value="077741">DESARROLLO SOCIOECONOMICO Y
+
+
             break;
             case 'paisInput':
                 if ($query=="") {
