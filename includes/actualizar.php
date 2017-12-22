@@ -5,7 +5,7 @@
 	if (!empty($_POST)) {
 		require_once('conexion.php');
 		print_r($_POST);
-		
+
 		$programa='';
 		$orientacion='';
 		switch ($_POST['programaAcademico']) {
@@ -65,7 +65,7 @@
 
 
 
-		$sql = "UPDATE `graduat3s` SET `ID` = '{$_POST['ID']}', `codigo` = '{$_POST['codigo']}', `nombres` = '{$_POST['nombres']}', `apellidos` = '{$_POST['apellidos']}', `nacionalidad` = '{$_POST['nacionalidad']}', `genero` = '{$_POST['genero']}', `programa` = '$programa', `orientacion` = '$orientacion', `dia_graduacion` = '{$_POST['diaGraduacion']}', `mes_graduacion` = '{$_POST['mesGraduacion']}', `estatus` = '{$_POST['estatus']}', `lugar_pasantia` = '{$_POST['lugarPasantia']}', `exp_pasantia` = '{$_POST['exp_pasantia']}', `area_interes` = '{$_POST['area_interes']}',, `nickname` = '{$_POST['nickname']}', `asesor_tesis` = '{$_POST['asesor_tesis']}', `url_tesis` = '{$_POST['url_tesis']}', `titulo_tesis` = '{$_POST['titulo_tesis']}, `fecha_nacimiento` = '{$_POST['fechaNacimiento']}', `financiado_por` = '{$_POST['financiado_por']}', `direccion` = '{$_POST['direccion']}', `email` = '{$_POST['email']}', `telefono` = '{$_POST['telefono']}', `movil` = '{$_POST['movil']}' WHERE `graduat3s`.`ID` = '{$_POST['ID']}'";
+		$sql = "UPDATE `graduat3s` SET `ID` = '{$_POST['ID']}', `codigo` = '{$_POST['codigo']}', `nombres` = '{$_POST['nombres']}', `apellidos` = '{$_POST['apellidos']}', `nacionalidad` = '{$_POST['nacionalidad']}', `genero` = '{$_POST['genero']}', `programa` = '$programa', `orientacion` = '$orientacion', `dia_graduacion` = '{$_POST['diaGraduacion']}', `mes_graduacion` = '{$_POST['mesGraduacion']}', `estatus` = '{$_POST['estatus']}', `lugar_pasantia` = '{$_POST['lugarPasantia']}', `exp_pasantia` = '{$_POST['exp_pasantia']}', `area_interes` = '{$_POST['area_interes']}', `nickname` = '{$_POST['nickname']}', `asesor_tesis` = '{$_POST['asesor_tesis']}', `url_tesis` = '{$_POST['url_tesis']}', `titulo_tesis` = '{$_POST['titulo_tesis']}', `fecha_nacimiento` = '{$_POST['fechaNacimiento']}', `financiado_por` = '{$_POST['financiado_por']}', `direccion` = '{$_POST['direccion']}', `email` = '{$_POST['email']}', `telefono` = '{$_POST['telefono']}', `movil` = '{$_POST['movil']}' WHERE `graduat3s`.`ID` = '{$_POST['ID']}'";
 
 		if ($mysqli->query($sql) === TRUE) {
 		    header("Location: /Github/Perfiles-Materialize-cris//index.php?busca=".$_POST['apellidos'], true);
