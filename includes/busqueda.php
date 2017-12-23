@@ -80,9 +80,7 @@ if(empty($_GET["busca"]))
                 $Titulo='INGENIERO AGRONOMO';
                 $card_action='<p>Orientación: <strong>'.$f['orientacion'].'</strong></p>
                 <p>Título del proyecto de graduación:</br> <strong>'.$f['titulo_tesis'].'</strong></p>
-
                               <p>Áreas de interés:</br> <strong>'.$f['area_interes'].'</strong></p>
-                              <p>Áreas de investigación:</br> <strong>'.$f['area_investigacion'].'</strong></p>
                               <p>Lugar donde realizó su pasantía:</br> <strong>'.$f['lugar_pasantia'].'</strong></p>
                               <p>Experiencia de trabajo obtenia en su pasantía:</br> <strong>'.$f['exp_pasantia'].'</strong></p>
                               <p>Asesor de Tesis:</br> <strong>'.$f['asesor_tesis'].'</strong></p>
@@ -90,13 +88,13 @@ if(empty($_GET["busca"]))
             }
             if ($f['programa']=='0777') {
             if ($f['orientacion']=='INGENIERIA AGRONOMICA') {
-                $Titulo='INGENIERO AGRONOMO';
+                $Titulo='INGENIERO AGRÓNOMO';
             }
             if ($f['orientacion']=='AGROINDUSTRIA ALIMENTARIA') {
                 $Titulo='INGENIERO EN AGROINDUSTRIA ALIMENTARIA';
             }
             if ($f['orientacion']=='ADMINISTRACION DE AGRONEGOCIOS') {
-                $Titulo='INGENIERO EN ADMINISTRACION DE AGRONEGOCIOS';
+                $Titulo='INGENIERO EN ADMINISTRACIÓN DE AGRONEGOCIOS';
             }
             if ($f['orientacion']=='DESARROLLO SOCIOECONOMICO Y AMBIENTE') {
                 $Titulo='INGENIERO EN DESARROLLO SOCIOECONOMICO Y AMBIENTE';
@@ -122,24 +120,12 @@ if(empty($_GET["busca"]))
                           </div>
 
                           <div class="col s6 m7 l8 ">
-                            <p>ID: <strong>'.$f['ID'].'</strong></p>
                             <p>Clase: <strong>'.$f['clase'].'</strong></p>
                             <p>Título Obtenido: <strong>'.$Titulo.' </strong></p>
                             <p>Código: <strong>'.$f['codigo'].'</strong></p>
-                            <p>Nickname: <strong>'.$f['nickname'].'</strong></p>
                             <p>Genero: <strong>'.$f['genero'].'</strong></p>
                             <p>País de origen: <strong>'.$f['nacionalidad'].'</strong></p>
                             <p>Fecha de Nacimiento: <strong>'.date('d/m/Y', $date).'</strong></p></br>
-                            <p>País donde vive:</br> <strong>'.$f['pais_reside'].'</strong></p>
-                            <p>Ciudad:</br> <strong>'.$f['ciudad'].'</strong></p>
-                            <p>Dirección: <strong>'.$f['direccion'].'</strong></p>
-                            <p>Teléfono: <strong>'.$f['telefono'].'</strong> Móvil: <strong>'.$f['movil'].'</strong></p>
-                            <p>Correo electrónico: <strong><a href="mailto:'.$f['email'].'">'.$f['email'].'</a></strong></p></br>
-                            <p>Financiando por:</br> <strong>'.$f['financiado_por'].'</strong></p>
-                            <p>Entidades:</br> <strong>'.$f['otras_entidades'].'</strong></p></br>
-                            <p>Fallecido: <strong>'.$f['deceased'].'</strong></p>
-                            <p>Fecha en que Falleció: <strong>'.date('d/m/Y', $datef).'</strong></p>
-
                           </div>
                       </div>
                         '.$boton.'
