@@ -179,25 +179,45 @@
 
         <div class="row">
             <div class="input-field col l4 m6 s12">
-
                 <input placeholder="" value="<?php echo $_GET['financiado_por']; ?>"  id="financiado_por" name="financiado_por" type="text" class="active validate" >
                 <label for="name"> Financiado por: </label>
+                <p>
+                  <input type="checkbox" id="test5" checked="checked" />
+                  <label for="test5">Fondos Propios</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="test6"/>
+                  <label for="test6">Zamorano</label>
+                </p>
+                <p>
+                  <input type="checkbox" class="filled-in" id="filled-in-box"/>
+                  <label for="filled-in-box">Otras entidades</label>
+                </p>
             </div>
-
-
-             <div class="input-field col l4 m6 s12">
-
+            <div class="input-field col l4 m6 s12">
+                <input placeholder="" value="<?php echo $_GET['otras_entidades']; ?>"  id="otras_entidades" name="otras_entidades" type="text" class="active validate" >
+                <label for="name"> Entidades: </label>
+            </div>
+            <div class="input-field col l4 m6 s12">
                 <input placeholder="" value="<?php echo $_GET['fechaNacimiento']; ?>"  id="fechaNacimiento" name="fechaNacimiento" type="date" class="active validate" required>
                 <label for="name"> Fecha de nacimiento </label>
              </div>
-
         </div>
+        <div class="input-field file-field">
+           <div class="btn">
+             <span>Cargar fotografía</span>
+             <input type="file">
+           </div>
+           <div class="file-path-wrapper">
+             <input class="file-path validate" type="text">
+           </div>
+         </div>
         <div class="row">
-          <dic class="col l12 m12 s12">
+          <div class="col l12 m12 s12">
             <button align="center" class="waves-effect waves-light btn-large ripple-effect"  name="buscador" type="submit">
               <i class="material-icons left">send</i>Actualizar datos
             </button>
-          </dic>
+          </div>
         </div>
       </div>
     </div>
