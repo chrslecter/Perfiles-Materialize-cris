@@ -181,18 +181,10 @@
             <div class="input-field col l4 m6 s12">
                 <input placeholder="" value="<?php echo $_GET['financiado_por']; ?>"  id="financiado_por" name="financiado_por" type="text" class="active validate" >
                 <label for="name"> Financiado por: </label>
-                <p>
-                      <input type="checkbox" id="fondos_propios"/>
-                      <label for="fondos_propios ">Fondos Propios</label>
-                    </p>
-                    <p>
-                      <input type="checkbox" id="fondos_zamorano"  />
-                      <label for="fondos_zamorano">Fondos Zamorano</label>
-                    </p>
-                    <p>
-                      <input type="checkbox" id="fondos_entidades"  />
-                      <label for="fondos_entidades">Otras Entidades</label>
-                    </p>
+            </div>
+            <div class="input-field col l4 m6 s12">
+                <input placeholder="" value="<?php echo $_GET['fondos_propios']; ?>"  id="fondos_propios" name="fondos_propios" type="text" class="active validate" >
+                <label for="name"> Fondos Propios: </label>
             </div>
             <div class="input-field col l4 m6 s12">
                 <input placeholder="" value="<?php echo $_GET['otras_entidades']; ?>"  id="otras_entidades" name="otras_entidades" type="text" class="active validate" >
