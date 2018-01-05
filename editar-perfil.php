@@ -182,15 +182,15 @@
                 <input placeholder="" value="<?php echo $_GET['financiado_por']; ?>"  id="financiado_por" name="financiado_por" type="text" class="active validate" >
                 <label for="name"> Financiado por: </label>
                 <p>
-                  <input type="checkbox" id="test5" checked="checked" />
+                  <input type="checkbox" id="fondo_propios" checked="checked" />
                   <label for="test5">Fondos Propios</label>
                 </p>
                 <p>
-                  <input type="checkbox" id="test6"/>
+                  <input type="checkbox" id="fondos_zamorano"/>
                   <label for="test6">Zamorano</label>
                 </p>
                 <p>
-                  <input type="checkbox" class="filled-in" id="filled-in-box"/>
+                  <input type="checkbox" class="filled-in" id="fondos_otros"/>
                   <label for="filled-in-box">Otras entidades</label>
                 </p>
             </div>
