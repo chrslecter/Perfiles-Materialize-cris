@@ -42,6 +42,10 @@
          </div>
          <div class="row">
            <div class="input-field col l3 m6 s12">
+               <input placeholder="" value="<?php echo $_GET['fechaNacimiento']; ?>"  id="fechaNacimiento" name="fechaNacimiento" type="date" class="active validate" required>
+               <label for="name"> Fecha de nacimiento </label>
+            </div>
+           <div class="input-field col l3 m6 s12">
              <input placeholder="" value="<?php echo $_GET['pais_reside']; ?>"  id="pais_reside" name="pais_reside" type="text" class="active validate">
              <label for="name"> País donde reside </label>
           </div>
@@ -182,18 +186,6 @@
                 <input placeholder="" value="<?php echo $_GET['financiado_por']; ?>"  id="financiado_por" name="financiado_por" type="text" class="active validate" >
                 <label for="name"> Financiado por: </label>
             </div>
-            <div class="input-field col l4 m6 s12">
-                <input placeholder="" value="<?php echo $_GET['fondos_propios']; ?>"  id="fondos_propios" name="fondos_propios" type="text" class="active validate" >
-                <label for="name"> Fondos Propios: </label>
-            </div>
-            <div class="input-field col l4 m6 s12">
-                <input placeholder="" value="<?php echo $_GET['otras_entidades']; ?>"  id="otras_entidades" name="otras_entidades" type="text" class="active validate" >
-                <label for="name"> Entidades: </label>
-            </div>
-            <div class="input-field col l4 m6 s12">
-                <input placeholder="" value="<?php echo $_GET['fechaNacimiento']; ?>"  id="fechaNacimiento" name="fechaNacimiento" type="date" class="active validate" required>
-                <label for="name"> Fecha de nacimiento </label>
-             </div>
         </div>
         <div class="input-field file-field">
            <div class="btn">
