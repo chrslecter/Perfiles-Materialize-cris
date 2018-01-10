@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 10, 2018 at 03:18 PM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.5.37
+-- Host: localhost
+-- Generation Time: Jan 10, 2018 at 10:55 PM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 5.6.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,6 +21,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `graduat3s`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `acceso`
+--
+
+CREATE TABLE `acceso` (
+  `user_acces` varchar(25) NOT NULL,
+  `login_acces` varchar(100) NOT NULL,
+  `ID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `acceso`
+--
+
+INSERT INTO `acceso` (`user_acces`, `login_acces`, `ID`) VALUES
+('Webmaster', 'afdd63af34e36580b100d4f4752c480c', 1);
 
 -- --------------------------------------------------------
 
@@ -44,7 +65,7 @@ CREATE TABLE `graduat3s` (
   `titulo_tesis` varchar(500) NOT NULL,
   `url_tesis` varchar(500) NOT NULL,
   `lugar_pasantia` varchar(255) DEFAULT NULL,
-  `exp_pasantia` varchar(500) NOT NULL,
+  `exp_pasantia` varchar(1000) NOT NULL,
   `asesor_tesis` varchar(500) NOT NULL,
   `area_interes` varchar(500) NOT NULL,
   `financiado_por` varchar(500) NOT NULL,
@@ -7404,7 +7425,7 @@ INSERT INTO `graduat3s` (`ID`, `clase`, `codigo`, `nombres`, `apellidos`, `nacio
 (8616, 2014, '14017', 'MARY ROBERTA', 'CRUZ VALDEZ', 'HONDURAS', '', '0', '', '', 0, 0, '', '0000-00-00', '0', '', '', '', '0', '', '0', '', '', '', 'F', '', '0777', 'AGROINDUSTRIA ALIMENTARIA', '', '', '0000-00-00', 'G2', '', 0, '6', '6', 0),
 (8617, 2014, '14043', 'DONALDO ENRIQUE', 'CRUZ VILLEDA', 'HONDURAS', '', '0', '', '', 0, 0, '', '0000-00-00', '0', '', '', '', '0', '', '0', '', '', '', 'M', '', '0777', 'AGROINDUSTRIA ALIMENTARIA', '', '', '0000-00-00', 'G2', '', 0, '6', '6', 0),
 (8618, 2014, '14377', 'MARIA JOSE ', 'CUNGUAN CUNDAR', 'ECUADOR', '', '0', '', '', 0, 0, '', '0000-00-00', '0', '', '', '', '0', '', '0', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', '', '', '0000-00-00', 'G2', '', 0, '6', '6', 0),
-(8619, 2014, '14191', 'VICTOR EMMANUEL', 'D'' VICENTE LAZO', 'HONDURAS', '', '0', '', '', 0, 0, '', '0000-00-00', '0', '', '', '', '0', '', '0', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', '', '', '0000-00-00', 'G2', '', 0, '6', '6', 0),
+(8619, 2014, '14191', 'VICTOR EMMANUEL', 'D\' VICENTE LAZO', 'HONDURAS', '', '0', '', '', 0, 0, '', '0000-00-00', '0', '', '', '', '0', '', '0', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', '', '', '0000-00-00', 'G2', '', 0, '6', '6', 0),
 (8620, 2014, '14285', 'DENISON ANDRES', 'DAVILA LARA', 'ECUADOR', '', '0', '', '', 0, 0, '', '0000-00-00', '0', '', '', '', '0', '', '0', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', '', '', '0000-00-00', 'G2', '', 0, '6', '6', 0),
 (8621, 2014, '14145', 'VICTOR MANUEL', 'DELGADO MUÑOZ', 'PANAMA', '', '0', '', '', 0, 0, '', '0000-00-00', '0', '', '', '', '0', '', '0', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', '', '', '0000-00-00', 'G2', '', 0, '6', '6', 0),
 (8622, 2014, '14012', 'MARCOS MANUEL', 'DERAS SANDOVAL', 'HONDURAS', '', '0', '', '', 0, 0, '', '0000-00-00', '0', '', '', '', '0', '', '0', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', '', '', '0000-00-00', 'G2', '', 0, '6', '6', 0),
@@ -8215,15 +8236,15 @@ INSERT INTO `graduat3s` (`ID`, `clase`, `codigo`, `nombres`, `apellidos`, `nacio
 (9424, 2016, '16083', 'TANIA ALEJANDRA', 'ZUNIGA GALO', 'HONDURAS', '', '0', '', '', 0, 0, '', '0000-00-00', '0', '', '', '', '0', '', '0', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', '', '', '0000-00-00', 'G2', '', 0, '3', '12', 0),
 (9431, 2017, '16350', 'CLINTON', 'PANDURO CASTRO', 'PERU', '', '0', '', '', 0, 0, '', '0000-00-00', '0', '', '', '', '0', '', '0', '', '', '', 'M', '', '0777', 'AMBIENTE Y DESARROLLO', '', '', '0000-00-00', 'G2', '', 0, '18', '1', 0),
 (9998, 2017, '17045', 'JOSÉ ROBERTO', 'MORALES ALDANA', 'GUATEMALA', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9997, 2017, '17215', 'NORA PAMELA', 'MONTENEGRO GONZÁLEZ', 'ECUADOR', 'Pinocha 17', 'ECUADOR', 'Cayambe', 'Mejía S4-31 y Chile', 22, 0, 'pame2015-m@hotmail.com', '1995-11-20', 'Evaluación de los efectos de la aplicación de betaína en el desempeño y calidad de canal en cerdos de engorde.', 'https://bdigital.zamorano.edu/handle/11036/6011', 'Madrid, España', 'Manejo de Modelos de Simulación de Cultivos de banano, maíz y palma; mediante el software "Vensin"', 'Rogel Castillo Mgtr.', 'Zootecnia', 'Instituto Ecuatoriano de Créditos y Becas (IECE)', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9997, 2017, '17215', 'NORA PAMELA', 'MONTENEGRO GONZÁLEZ', 'ECUADOR', 'Pinocha 17', 'ECUADOR', 'Cayambe', 'Mejía S4-31 y Chile', 22, 0, 'pame2015-m@hotmail.com', '1995-11-20', 'Evaluación de los efectos de la aplicación de betaína en el desempeño y calidad de canal en cerdos de engorde.', 'https://bdigital.zamorano.edu/handle/11036/6011', 'Madrid, España', 'Manejo de Modelos de Simulación de Cultivos de banano, maíz y palma; mediante el software \"Vensin\"', 'Rogel Castillo Mgtr.', 'Zootecnia', 'Instituto Ecuatoriano de Créditos y Becas (IECE)', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9996, 2017, '16191', 'KATHIA NATALIA', 'MISERENDINO ROMERO', 'BOLIVIA', 'Chaisita 16.17', 'BOLIVIA', 'Santa Cruz de la Sierra', 'Avenida Los Cusis 2185', 77397379, 0, 'nmiserendino@outlook.com', '1993-10-15', 'Evaluación del producto simbiótico PoultryStar® sol en pollos de engorde Cobb® hasta los 21 días de edad', 'https://bdigital.zamorano.edu/handle/11036/5996', 'Universidad de Nebraska-Lincoln ', 'Experiencia trabajando en laboratorio de fitopatología con enfermedades en trigo y frijol.', 'Patricio E. Paz, Ph.D.', 'trabajar en silos de almacenamiento de granos.', 'Fondos Propios', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9995, 2017, '17160', 'KARLA ANDREA', 'MISERENDINO ROMERO', 'BOLIVIA', 'Chaisita 17', 'BOLIVIA', 'Santa Cruz de la Sierra', 'Avenida Los Cusis 2185', 77397379, 0, 'karla_miserendino@hotmail.com', '1995-08-19', 'Evaluación del producto simbiótico PoultryStar® sol en pollos de engorde Cobb® hasta los 21 días de edad', 'https://bdigital.zamorano.edu/handle/11036/5996', 'Universidad de Nebraska-Lincoln ', 'Experiencia trabajando en tecnología de aplicación de pesticidas, maquinas para medir deriva al momento de la aplicación, tamaño de gota, visualización de daño en plantas post aplicación y diferenciación de boquillas. ', 'Patricio E. Paz, Ph.D.', 'Tecnologia en aplicación de pesticidas, producción de granos y semillas, riego y drenaje, agricultura de presición', 'Fondos propios', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9994, 2017, '17173', 'JOSÉ HERMES', 'MERO BARROS', 'ECUADOR', 'Roshka', 'ECUADOR', 'Manta', 'Ave 23 Calle 17', 994507311, 0, 'Jmerobarros@hotmail.com', '1994-03-11', 'Evaluación de microinjerto de Ipomoea Batatas (L.) Lam e Ipomoea Setosa Ker Gawl', 'https://bdigital.zamorano.edu/handle/11036/6132', 'México, CEICKOR', 'Manejo de invernaderos de jitomate', 'María Alexandra Bravo', 'Fitotecnia, cultivo de tejidos, biotenología', 'Becado', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9993, 2017, '17298', 'SCARLET', 'MENDOZA BENAVIDES', 'ECUADOR', 'Chiqui ', 'ECUADOR', 'Portoviejo', 'Av. Antonio Menendez S/N y Costa Rica esquina (Parque la Rotonda)', 0, 0, 'smb1192_@hotmail.com', '1992-09-11', ' Actualización de la lista de Gorgojos (Coleoptera: Curculionidae) de importancia cuarentenaria para Honduras y elaboración de una ficha técnica para cada especie)', '', 'Guayaquil, Ecuador', 'Manejo de cultivo de cacao de forma sostenible. ', 'Jesús Orozco', 'Entomología, Frutales (Cacao), Control Biologico, Cultivos de tejidos', 'Fondos propios, Gobierno de Ecuador', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9993, 2017, '17298', 'SCARLET', 'MENDOZA BENAVIDES', 'ECUADOR', 'Chiqui ', 'ECUADOR', 'Portoviejo', 'Av. Antonio Menendez S/N y Costa Rica esquina (Parque la Rotonda)', 0, 0, 'smb1192_@hotmail.com', '1992-09-11', ' Actualización de la lista de Gorgojos (Coleoptera: Curculionidae) de importancia cuarentenaria para Honduras y elaboración de una ficha técnica para cada especie)', 'https://bdigital.zamorano.edu/handle/11036/6131', 'Guayaquil, Ecuador', 'Manejo de cultivo de cacao de forma sostenible. ', 'Jesús Orozco', 'Entomología, Frutales (Cacao), Control Biologico, Cultivos de tejidos', 'Fondos propios, Gobierno de Ecuador', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9992, 2017, '17273', 'AMALIA', 'MEJÍA PELÁEZ', 'COLOMBIA', 'Fiona 17', 'COLOMBIA', 'Pereira ', 'Entrada 16 Cadena El Tigre HDA. Jaraguay ', 0, 3329025, 'amalia.mejia95@gmail.com', '1995-07-24', 'Evaluación del efecto de la incorporación de dos tipos de plásticos (biodegradable y convencional) y la actividad de lombrices en suelos arenosos en trigo (Triticum aestivum L.)', 'https://bdigital.zamorano.edu/handle/11036/6010', 'Universidad de Wageningen, Holanda ', 'Trabajar en el departamento de investigación de Física del Suelo ', 'Gloria Arévalo de Gauggel ', 'Microbiología del suelo y la interacción planta-suelo ', 'Fondos propios', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9989, 2017, '17311', 'ALEJANDRA DANELIA', 'MARTÍNEZ TURCIOS', 'HONDURAS', 'Lili', 'HONDURAS', 'Tegucigalpa', 'Res. Copacabana, Roble Oeste.', 0, 95953417, 'turciosdanelia@yahoo.com', '1996-12-26', 'Producción de tilapia en la etapa de engorde con dos estrategias de alimentación', 'https://bdigital.zamorano.edu/handle/11036/6020', 'Honduras, El Cajón, Aquafinca Saint Peter Fish', 'Manejo de recursos en el área de alimentación en el cultivo de tilapia, manejo del personal,  investigación.', 'Patricio Paz Ph.D', 'Apicultura, acuacultura, ganado de carne, frutales, manejo integrado de plagas, malezas, entomología, ornamentales.', 'Zamorano', '', '', 'Gobierno de Honduras', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9990, 2017, '17032', 'ANDRÉS', 'MARTINI BALSELLS', 'GUATEMALA', 'Moshk', 'GUATEMALA', 'GUATEMALA', '2 calle 25-19 zona 15 vh 1 multimedica oficina 804 Guatemala 01015', 57324600, 0, 'mmartini1962@gmail.com', '1995-08-16', 'Comparación de dietas con harina de tilapia o harina de vísceras de aves, en pollos Cobb® durante los primeros siete días de edad', '', 'Santander Sugar, Belize', '', 'Dr. Patricio Paz', 'Avicultura y cultivos extensivos', 'Privado', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9991, 2017, '17189', 'KARLA', 'MATOS ROSARIO', 'REP. DOMINICANA', 'Chichigua 17', 'REP. DOMINICANA', 'Santo Domingo', 'Calle Padre Paules #36, Ensanche Ozama. Santo Domingo Este', 2147483647, 0, 'Kmrosario@hotmail.com', '1993-06-01', 'Efecto de tres densidades en gallinas de postura Dekalb White®  alojadas en jaulas y su comportamiento productivo', '', 'Junta Agroempresarial Dominicana, Rep. Dom.', 'Trabajar con planes de negocios con agricultores de diferentes rubros.', 'Patricio Enrique Paz Castillo ', 'Acuacultura, Producción Avícola', 'Zamorano', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9990, 2017, '17032', 'ANDRÉS', 'MARTINI BALSELLS', 'GUATEMALA', 'Moshk', 'GUATEMALA', 'GUATEMALA', '2 calle 25-19 zona 15 vh 1 multimedica oficina 804 Guatemala 01015', 57324600, 0, 'mmartini1962@gmail.com', '1995-08-16', 'Comparación de dietas con harina de tilapia o harina de vísceras de aves, en pollos Cobb® durante los primeros siete días de edad', 'https://bdigital.zamorano.edu/handle/11036/6112', 'Santander Sugar, Belize', '', 'Dr. Patricio Paz', 'Avicultura y cultivos extensivos', 'Privado', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9991, 2017, '17189', 'KARLA', 'MATOS ROSARIO', 'REP. DOMINICANA', 'Chichigua 17', 'REP. DOMINICANA', 'Santo Domingo', 'Calle Padre Paules 36, Ensanche Ozama. Santo Domingo Este', 2147483647, 0, 'kmrosario@hotmail.com', '1993-06-01', 'Efecto de tres densidades en gallinas de postura Dekalb White®  alojadas en jaulas y su comportamiento productivo', 'https://bdigital.zamorano.edu/handle/11036/6009', 'Junta Agroempresarial Dominicana, Rep. Dom.', 'Trabajar con planes de negocios con agricultores de diferentes rubros.', 'Patricio Enrique Paz Castillo ', 'Acuacultura, Producción Avícola', 'Zamorano', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9988, 2017, '17309', 'DANIELA ALEXANDRA', 'MARTÍNEZ TURCIOS', 'HONDURAS', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9987, 2017, '16281', 'SIMÓN', 'MARTÍNEZ TORO', 'COLOMBIA', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9986, 2017, '17002', 'ERICK JAVIER', 'MARTÍNEZ RODRÍGUEZ', 'HONDURAS', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
@@ -8436,18 +8457,18 @@ INSERT INTO `graduat3s` (`ID`, `clase`, `codigo`, `nombres`, `apellidos`, `nacio
 (9780, 2017, '17104', 'ALEJANDRA NOHEMY', 'ABREGO GAVIDIA', 'EL SALVADOR', 'Chiripa 17', 'EL SALVADOR', 'San Salvador', 'Residencial. Santa María, Calle Las Acacias, #45, Ayutyxtepeque', 70330185, 0, 'aleabregog@hotmail.com', '1995-03-31', 'Investigación de la actividad anti fúngica del aceite esencial de mostaza blanca, carvacrol y su interacción contra Candida krusei', 'https://bdigital.zamorano.edu/handle/11036/6025', 'Universidad de Auburn, Alabama, Estados Unidos', 'Laboratorio de Microbiología', 'Emefa Monu PhD, Mayra Marquez Gonzales PhD', '', '', '', '', '', 'F', '', '0777', 'AGROINDUSTRIA ALIMENTARIA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9779, 2017, '15292', 'AMAURIS', 'VIZCAÍNO GONZÁLEZ', 'REP. DOMINICANA', 'K-reto', 'REP. DOMINICANA', 'Bani', 'El limonar/calle francisco araujo', 0, 9537889, 'amauris.vizcaino@hotmail.com', '1992-06-14', 'Estudio de mercado para la comercialización de productos orgánicos en el Puesto de Ventas Zamorano y Tegucigalpa, Honduras', 'https://bdigital.zamorano.edu/handle/11036/6171', 'Puesto de Ventas, Zamorano', 'Estudio de factibilidad y Análisis de Ventas Manejo de Recurso Humano', 'Martin Leal, M.S.c.', 'Macroeconomía y Finanzas', 'Otras entidades', '', '', 'MESCYT Y El Ministerio de Agricultura de República Dominicana', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9778, 2017, '16148', 'JOSÉ ALFREDO', 'VAQUERO PERAZA', 'EL SALVADOR', 'Igor 17', 'EL SALVADOR', 'Santa Ana', 'BO San Miguelito FNL 27 CL OTE Y 5 AV Sur POL J', 24401888, 0, 'josevaquero1995@gmail.com', '1995-01-19', 'Estudio del clima organizacional de Agroindustrias La Espiga S.A. de C.V., Metapán, El Salvador', 'https://bdigital.zamorano.edu/handle/11036/6170', 'Módulo de Acuacultura ', 'Apoyo en las labores del plantel, gestión de actividades con los estudiantes de tercer año, supervisión y cuidado de los estudiantes.', 'PhD Raúl Soto, Ingeniera Angélica Madrid', 'Negocios internacionales', 'Fondos Propios', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9777, 2017, '17291', 'SOFÍA ANABEL', 'TABI FUREZ', 'ECUADOR', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'F', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9776, 2017, '17012', 'CHRYSTIAN OSWALDO', 'SUCHINI OLIVA', 'GUATEMALA', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9775, 2017, '17041', 'LUDRENSON LUCIEN', 'ST-PHAR', 'HAITÍ', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9777, 2017, '17291', 'SOFÍA ANABEL', 'TABI FUREZ', 'ECUADOR', 'Pachamama', 'ECUADOR', 'Cotacachi', 'Comunidad de Chilcapamba', 997267816, 0, 'anabeltabi@gmail.com', '1995-12-27', 'Formulación de una dieta de costo mínimo para alimentación de cerdos incluyendo los insumos no convencionales suero y ariche', 'https://bdigital.zamorano.edu/handle/11036/6169', 'Universidad Estatal de Kansas', 'Prácticas agrícolas en producción de trigo orgánico, Creación de base de datos de precios de insumos para productores de cultivos orgánicos', 'Wolfgang Pejuán, Ph.D. ', 'Finanzas, economía, estadísticas, producción de cultivos orgánicos, conservación y optimización de los recursos naturales', 'NAHUEL', '', '', '', 'F', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9776, 2017, '17012', 'CHRYSTIAN OSWALDO', 'SUCHINI OLIVA', 'GUATEMALA', 'Chita 17', 'GUATEMALA', 'GUATEMALA', 'Address Lote 173 Colonia Minerva zona 1 Ciudad de Chiquimula', 0, 0, 'suchini144@gmail.com', '1996-06-18', 'Plan de negocios para una granja avícola destinada a la producción de huevo en la ciudad de Chiquimula, Guatemala', 'https://bdigital.zamorano.edu/handle/11036/6168', 'Universidad estatal de Kansas', '', 'Marco Antonio Vega Solano', 'Agronegocios', 'Fondos Propios, Fondos Anónimos ', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9775, 2017, '17041', 'LUDRENSON LUCIEN', 'ST-PHAR', 'HAITÍ', 'Nepe 17', 'HAITÍ', 'Cap-Haïtien', '358, Charrier, Rue de l´amitié, Cap-Haïtien, Haïti', 38575508, 0, 'stpharlud@gmail.com', '1994-01-10', 'Determinantes de adopción de prácticas de conservación de suelos en los municipios de Santa Ana, Opatoro y Guajiquiro en el departamento de La Paz, Honduras', 'https://bdigital.zamorano.edu/handle/11036/6167', 'Don Limon GmbH, Alemania', 'Negocio internacional de frutas y verduras, Gestión de cadena de suministro para frutas y verduras', 'Wolfgang Pejuán ', 'Administración de la cadena de suministro, negocio internacional,  economía agrícolas, estadisticas, finanzas, gestión de proyectos', 'Zamorano', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9774, 2017, '17059', 'ALEXANDRA MARIE', 'SORIANO CASTRO', 'HONDURAS', 'Pinuk 17', 'HONDURAS', 'Siguatepeque', 'Barrio El Centro, una cuadra y media al sur de la Escuela República de Colombia', 0, 32822850, 'marie_soriano95@hotmail.com', '1995-11-10', 'Diseño base de un sistema de trazabilidad en la cadena de valor porcina de la Escuela Agrícola Panamericana, Zamorano, Honduras', 'https://bdigital.zamorano.edu/handle/11036/6166', 'Panamá', 'Logística dentro de un vivero, Producción de plantas ornamentales', 'Angélica Madrid', 'ornamentales, cerdos', 'Fondos propios, Zamorano', '', '', 'Casa Presidencial', 'F', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9773, 2017, '17196', 'FRANCISCO JAVIER', 'SERRANO VALLECIOS', 'EL SALVADOR', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9772, 2017, '17214', 'HENRY PAOLO', 'RUIZ RODRÍGUEZ', 'ECUADOR', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9771, 2017, '17262', 'CAMILO JOSÉ', 'ROSENFELD MOLINA', 'ECUADOR', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9770, 2017, '17126', 'LORENA MARCELY', 'ROSA RODRÍGUEZ', 'EL SALVADOR', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'F', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9769, 2017, '17341', 'RAFAEL ANTONIO', 'RODRÍGUEZ AVELAR', 'HONDURAS', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9773, 2017, '17196', 'FRANCISCO JAVIER', 'SERRANO VALLECIOS', 'EL SALVADOR', 'Guayabo 17', 'EL SALVADOR', 'La libertad', 'Residencial Via del mar, av. Las olas sur, calle 7 oriente, casa 3', 79886781, 0, 'frank_serr_10@hotmail.com', '1994-12-16', 'Análisis de factibilidad para la introducción y comercialización de helados marca Zamorano en la ciudad de Tegucigalpa, Honduras', 'https://bdigital.zamorano.edu/handle/11036/6165', 'Escuela Agricola Panamericana, Zamorano', 'Manejo de recurso humano, admnistracion de inventario, lanzamiento al mercado de nuevos productos, desarrollo de nuevos productos', 'Rommel Reconco', 'Ganado lechero, ganado de carne, industria lactea, comercialización de productos.', 'Fondos propios', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9772, 2017, '17214', 'HENRY PAOLO', 'RUIZ RODRÍGUEZ', 'ECUADOR', 'Huascar', 'ECUADOR', 'Píllaro', 'Av. Abel Vasconez', 96547789, 0, '', '1996-03-23', 'Estudio de factibilidad para la producción de embutidos El Placer en Ambato, Ecuador.', 'https://bdigital.zamorano.edu/handle/11036/6164', 'Escuela Agricola Panamericana, Zamorano', 'Realizar análisis de ventas y desarrollar estrategias de ventas.', 'Luis Sandoval', 'Finanzas, Estadística', '', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9771, 2017, '17262', 'CAMILO JOSÉ', 'ROSENFELD MOLINA', 'ECUADOR', 'Pulpo 17', 'ECUADOR', 'Santo Domingo de los Colorados', 'Vía El Placer km 1', 0, 0, 'cros9515@gmail.com', '1995-11-15', 'Plan de negocios para producción de Vainilla de Tahití (Vanilla tahitensis) en Santo Domingo de los Colorados, Ecuador, con fines de exportación', 'https://bdigital.zamorano.edu/handle/11036/6163', 'Escuela Agrícola Panamericana, Zamorano', 'Como estudiante de cuarto año me integré a las actividades del  módulo de AH Energía Renovable como un asistente del instructor, con lo cual me encargué de dar las charlas pertinentes durante las prácticas y las giras de campo, y la gestión de proyectos de mejoramiento de la unidad, como la construcción de una casa demostrativa  donde se aplican distintas energías renovables, la creación de un huerto ecológico, la elaboración de una máquina para producir briquetas y una compuerta para el desagüe de la laguna de oxidación. Realicé el diseño y el presupuesto para un galpón de gallinas de engorde y el diseño de una letrina ecológica como colaborador de proyectos de desarrollo rural para el departamento de Ambiente y Desarrollo. También fui partícipe del manejo del recurso humano, ya que como asistente del instructor tuve la responsabilidad de manejar eficientemente las actividades y prácticas realizadas por los estudiantes de 2do año durante su tiempo en módulo.', 'Fredi Arias, Ph.D. F', 'aduanas, agroforestería, agroecología, especias, exportaciones, extensionismo agrícola, invernaderos, procesamiento de alimentos, vainilla', 'Fondos propios, Becado', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9770, 2017, '17126', 'LORENA MARCELY', 'ROSA RODRÍGUEZ', 'EL SALVADOR', '', 'EL SALVADOR', 'San Salvador', '1 calle pnt y 63 av N. #18-b', 0, 0, '', '1996-05-18', 'Impacto económico de la investigación del frijol en la agricultura hondureña', 'https://bdigital.zamorano.edu/handle/11036/6162', 'Kansas State University', 'AGEC 599 Estrategias de administración en los agronegocios, AGEC 712 tecnicas de optimización para economía agrícola', 'Luis Sandoval Ph.D.', 'Economía Agrícola, Estadística', 'Fondos propios, INSAFORP', '', '', '', 'F', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9769, 2017, '17341', 'RAFAEL ANTONIO', 'RODRÍGUEZ AVELAR', 'HONDURAS', 'Misko', 'HONDURAS', 'Atlántida', 'Santa Ana, San Francisco', 95531562, 0, 'rafarodri8_3@hotmail.com', '1995-12-18', 'Estudio de factibilidad para la exportación de vegetales orientales del Valle de Comayagua, Honduras a Estados Unidos para la empresa J&R Import and Export S.A.', 'https://bdigital.zamorano.edu/handle/11036/6161', 'Sol-Group Company. Pompano Beach, Fl', 'Control de calidad, Venta de fruta de segunda calidad', 'Marco Vega Solano', 'Importaciones y exportaciones', 'Zamorano, Secretaría de Agricultura y Ganadería', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9768, 2017, '17306', 'ANA CRISTINA', 'RICAURTE ALCÍVAR', 'ECUADOR', 'Minion 17', 'ECUADOR', 'Guayaquil', 'Sauces 1 Mz. F17 V28', 0, 98977078, '', '1991-10-05', 'Comparación de dos sistemas de costeo para cuatro productos de la planta de procesamiento de cárnicos de la Escuela Agrícola Panamericana, Zamorano', 'https://bdigital.zamorano.edu/handle/11036/6160', 'Esmeraldas, Ecuador', 'Manejo de cultivo de palma africana', 'Julio Rendón', 'Negocios, fitotecnia y acuacultura', 'Fondos Propios', '', '', '', 'F', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9767, 2017, '17022', 'EDWIN ORLANDO', 'PORTILLO RIVERA', 'EL SALVADOR', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(9766, 2017, '17074', 'MARCELA MARÍA', 'PINEDA SANTOS', 'HONDURAS', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'F', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9767, 2017, '17022', 'EDWIN ORLANDO', 'PORTILLO RIVERA', 'EL SALVADOR', 'Gorgojo 17', 'EL SALVADOR', 'San Salvador', 'Address Antiguo Cuscatlán, Madreselva pasaje F Norte 8', 94501678, 0, 'op_edwin@hotmail.com', '1996-03-25', 'Estimación piloto de los costos de producción y proceso de harina de grillo (acheta domesticus), como fuente de proteína para dieta humana en la finca Santa Marta, Morazán. El Salvador', 'https://bdigital.zamorano.edu/handle/11036/6159', 'Escuela Agrícola Panamericana, Zamorano', '', 'Raúl Soto Diaz ', '', 'Fondos propios', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(9766, 2017, '17074', 'MARCELA MARÍA', 'PINEDA SANTOS', 'HONDURAS', 'Loba', 'HONDURAS', 'Tegucigalpa', 'Col. Las minitas Av. Venecia casa #2451', 97101252, 0, 'marcelapineda074@gmail.com', '1994-10-18', 'Cosotos estándares para la producción invitro de plántulas de camote y yuca en el Laboratorio de Cultivo de Tejidos Vegetales de la Escuela Agrícola Panamericana', 'https://bdigital.zamorano.edu/handle/11036/6158', 'Universidad Estatal de Connecticut', 'El impacto que tiene la economía agrícola en el estado de Connecticut, Costos de producción de viñedos es CT', 'Marcos Vega Solano', 'Ventas, logistica, exportaciones, calidad', 'Fondos propios, Gobierno de Honduras', '', '', '', 'F', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9765, 2017, '17166', 'MANUEL ALEJANDRO', 'PINEDA CEFERINO', 'ECUADOR', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9764, 2017, '17157', 'VÍCTOR DANIEL', 'PEÑAHERRERA BURBANO', 'ECUADOR', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (9763, 2017, '17270', 'JUAN PABLO', 'PEÑA ROA', 'COLOMBIA', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'ADMINISTRACION DE AGRONEGOCIOS', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
@@ -8507,7 +8528,8 @@ INSERT INTO `graduat3s` (`ID`, `clase`, `codigo`, `nombres`, `apellidos`, `nacio
 (10032, 2017, '17144', 'LUIS RODRIGO', 'SANDOVAL BANEGAS', 'HONDURAS', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (10033, 2017, '16086', 'ERNESTO JOSÉ', 'SEQUEIRA ENRÍQUEZ', 'NICARAGUA', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (10034, 2017, '17075', 'CRISTIAN ALEJANDRO', 'SOLÍS REYES ', 'GUATEMALA', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
-(10035, 2017, '17145', 'ELISA MICHELLE', 'SOLÍS TOAPANTA', 'GUATEMALA', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
+(10035, 2017, '17145', 'ELISA MICHELLE', 'SOLÍS TOAPANTA', 'GUATEMALA', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0);
+INSERT INTO `graduat3s` (`ID`, `clase`, `codigo`, `nombres`, `apellidos`, `nacionalidad`, `nickname`, `pais_reside`, `ciudad`, `direccion`, `telefono`, `movil`, `email`, `fecha_nacimiento`, `titulo_tesis`, `url_tesis`, `lugar_pasantia`, `exp_pasantia`, `asesor_tesis`, `area_interes`, `financiado_por`, `fondos_propios`, `fondos_zamorano`, `otras_entidades`, `genero`, `rubros`, `programa`, `orientacion`, `area_investigacion`, `deceased`, `date_deceased`, `estatus`, `pa`, `anioIA`, `dia_graduacion`, `mes_graduacion`, `codigoIA`) VALUES
 (10036, 2017, '17300', 'ROSA MARÍA', 'SORIANO YNFANTE', 'REP. DOMINICANA', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (10037, 2017, '15107', 'JUAN FERNANDO', 'SOSA VARGAS', 'GUATEMALA', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (10038, 2017, '17155', 'EDUARDO ROBERTO', 'SUÁREZ GUERRA', 'PANAMÁ', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
@@ -8524,9 +8546,67 @@ INSERT INTO `graduat3s` (`ID`, `clase`, `codigo`, `nombres`, `apellidos`, `nacio
 (10049, 2017, '17302', 'CARLOS ENRIQUE', 'ZEVALLOS PARRA', 'PERÚ', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (10050, 2017, '17065', 'ANDREA BEATRIZ', 'ZÚNIGA VALLADARES', 'HONDURAS', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_access`
+--
+
+CREATE TABLE `user_access` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `user` varchar(100) NOT NULL,
+  `cargo` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `departamento` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user_access`
+--
+
+INSERT INTO `user_access` (`id`, `name`, `email`, `user`, `cargo`, `description`, `password`, `departamento`) VALUES
+(1, 'JesÃºs Orozco', 'jorozco@zamorano.edu', 'orozco', 'Entomologo', '', 'Entomologia17', 'Ciencia y ProducciÃ³n Agropecuaria'),
+(2, 'Danny VelÃ¡squez', 'dvelasquez@zamorano.edu', 'webmaster', 'Webmaster y CISO', '', 'Danny8921', 'Mercadeo, Imagen y ComunicaciÃ³n'),
+(11, 'Enrique Sandoval', 'enrique', 'creative', 'Administrador', '', '', 'ProducciÃ³n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_admin`
+--
+
+CREATE TABLE `user_admin` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `usuario` varchar(30) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `cargo` varchar(100) NOT NULL,
+  `admin` tinyblob NOT NULL,
+  `description` text NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `departamento` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user_admin`
+--
+
+INSERT INTO `user_admin` (`id`, `nombre`, `usuario`, `email`, `cargo`, `admin`, `description`, `password`, `departamento`) VALUES
+(1, 'Danny VelÃ¡squez Cadenas', 'webmaster', 'dvelasquez@zamorano.edu', 'dvelasquez@zamorano.edu', '', 'webmaster', 'Danny8921', 'Mercadeo, Imagen y ComunicaciÃ³n'),
+(2, 'Christian UrquÃ­a', 'curquia', 'curquia@zamorano.edu', 'Desarrollador WEB', '', '', 'tortuga', 'Mercadeo, Imagen y ComunicaciÃ³n');
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `acceso`
+--
+ALTER TABLE `acceso`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexes for table `graduat3s`
@@ -8535,14 +8615,46 @@ ALTER TABLE `graduat3s`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `user_access`
+--
+ALTER TABLE `user_access`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user_admin`
+--
+ALTER TABLE `user_admin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `acceso`
+--
+ALTER TABLE `acceso`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `graduat3s`
 --
 ALTER TABLE `graduat3s`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10054;
+
+--
+-- AUTO_INCREMENT for table `user_access`
+--
+ALTER TABLE `user_access`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `user_admin`
+--
+ALTER TABLE `user_admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
