@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 10, 2018 at 10:55 PM
+-- Generation Time: Jan 17, 2018 at 08:11 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -21,25 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `graduat3s`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `acceso`
---
-
-CREATE TABLE `acceso` (
-  `user_acces` varchar(25) NOT NULL,
-  `login_acces` varchar(100) NOT NULL,
-  `ID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `acceso`
---
-
-INSERT INTO `acceso` (`user_acces`, `login_acces`, `ID`) VALUES
-('Webmaster', 'afdd63af34e36580b100d4f4752c480c', 1);
 
 -- --------------------------------------------------------
 
@@ -8546,67 +8527,9 @@ INSERT INTO `graduat3s` (`ID`, `clase`, `codigo`, `nombres`, `apellidos`, `nacio
 (10049, 2017, '17302', 'CARLOS ENRIQUE', 'ZEVALLOS PARRA', 'PERÚ', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'M', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0),
 (10050, 2017, '17065', 'ANDREA BEATRIZ', 'ZÚNIGA VALLADARES', 'HONDURAS', '', '', '', '', 0, 0, '', '0000-00-00', '', '', NULL, '', '', '', '', '', '', '', 'F', '', '0777', 'INGENIERIA AGRONOMICA', NULL, 'NO', '0000-00-00', 'G2', NULL, 0, '2', '12', 0);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `user_access`
---
-
-CREATE TABLE `user_access` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `user` varchar(100) NOT NULL,
-  `cargo` varchar(100) NOT NULL,
-  `description` text NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `departamento` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `user_access`
---
-
-INSERT INTO `user_access` (`id`, `name`, `email`, `user`, `cargo`, `description`, `password`, `departamento`) VALUES
-(1, 'JesÃºs Orozco', 'jorozco@zamorano.edu', 'orozco', 'Entomologo', '', 'Entomologia17', 'Ciencia y ProducciÃ³n Agropecuaria'),
-(2, 'Danny VelÃ¡squez', 'dvelasquez@zamorano.edu', 'webmaster', 'Webmaster y CISO', '', 'Danny8921', 'Mercadeo, Imagen y ComunicaciÃ³n'),
-(11, 'Enrique Sandoval', 'enrique', 'creative', 'Administrador', '', '', 'ProducciÃ³n');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user_admin`
---
-
-CREATE TABLE `user_admin` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
-  `usuario` varchar(30) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `cargo` varchar(100) NOT NULL,
-  `admin` tinyblob NOT NULL,
-  `description` text NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `departamento` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `user_admin`
---
-
-INSERT INTO `user_admin` (`id`, `nombre`, `usuario`, `email`, `cargo`, `admin`, `description`, `password`, `departamento`) VALUES
-(1, 'Danny VelÃ¡squez Cadenas', 'webmaster', 'dvelasquez@zamorano.edu', 'dvelasquez@zamorano.edu', '', 'webmaster', 'Danny8921', 'Mercadeo, Imagen y ComunicaciÃ³n'),
-(2, 'Christian UrquÃ­a', 'curquia', 'curquia@zamorano.edu', 'Desarrollador WEB', '', '', 'tortuga', 'Mercadeo, Imagen y ComunicaciÃ³n');
-
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `acceso`
---
-ALTER TABLE `acceso`
-  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexes for table `graduat3s`
@@ -8615,44 +8538,14 @@ ALTER TABLE `graduat3s`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `user_access`
---
-ALTER TABLE `user_access`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `user_admin`
---
-ALTER TABLE `user_admin`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `acceso`
---
-ALTER TABLE `acceso`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `graduat3s`
 --
 ALTER TABLE `graduat3s`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10054;
-
---
--- AUTO_INCREMENT for table `user_access`
---
-ALTER TABLE `user_access`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- AUTO_INCREMENT for table `user_admin`
---
-ALTER TABLE `user_admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
