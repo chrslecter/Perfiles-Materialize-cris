@@ -45,76 +45,76 @@ if(empty($_GET))
                 }
             break;
             case 'carreraInput':
-      // if ($value=='0777' || $value=='07771' || $value=='07772' || $value=='07773' || $value=='07774' || $value=='077711' || $value=='077721' || $value=='077731' || $value=='077741') { $carrera='0777'; }
+                // if ($value=='0777' || $value=='07771' || $value=='07772' || $value=='07773' || $value=='07774' || $value=='077711' || $value=='077721' || $value=='077731' || $value=='077741') { $carrera='0777'; }
 
-      switch ($value) {
-        case '07771':
-            $carrera='0777';
-           if ($query=="") {
-              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'INGENIERIA AGRONOMICA'";
-            }else{
-            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'INGENIERIA AGRONOMICA'";
-            }
-          break;
-        case '07772':
-            $carrera='0777';
-           if ($query=="") {
-              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'AGROINDUSTRIA ALIMENTARIA'";
-            }else{
-            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'AGROINDUSTRIA ALIMENTARIA'";
-            }
-          break;
-        case '07773':
-            $carrera='0777';
-           if ($query=="") {
-              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'ADMINISTRACION DE AGRONEGOCIOS'";
-            }else{
-            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'ADMINISTRACION DE AGRONEGOCIOS'";
-            }
-          break;
-        case '07774':
-            $carrera='0777';
-           if ($query=="") {
-              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'AMBIENTE Y DESARROLLO'";
-            }else{
-            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'AMBIENTE Y DESARROLLO'";
-            }
-          break;
-        case '077721':
-            $carrera='0777';
-           if ($query=="") {
-              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'AGROINDUSTRIA'";
-            }else{
-            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'AGROINDUSTRIA'";
-            }
-          break;
-        case '077731':
-            $carrera='0777';
-           if ($query=="") {
-              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'GESTION DE AGRONEGOCIOS'";
-            }else{
-            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'GESTION DE AGRONEGOCIOS'";
-            }
-          break;
-        case '077741':
-            $carrera='0777';
-           if ($query=="") {
-              $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'DESARROLLO SOCIOECONOMICO Y AMBIENTE'";
-            }else{
-            $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'DESARROLLO SOCIOECONOMICO Y AMBIENTE'";
-            }
-          break;
-          default:
-           $carrera=$value;
-            if ($query=="") {
-                $query= $query." programa LIKE '%".$carrera."%'";
-              }else{
-              $query= $query." AND programa LIKE '%".$carrera."%'";
-              }
-            break;
+                switch ($value) {
+                  case '07771':
+                      $carrera='0777';
+                     if ($query=="") {
+                        $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'INGENIERIA AGRONOMICA'";
+                      }else{
+                      $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'INGENIERIA AGRONOMICA'";
+                      }
+                    break;
+                  case '07772':
+                      $carrera='0777';
+                     if ($query=="") {
+                        $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'INGENIERO EN AGROINDUSTRIA ALIMENTARIA'";
+                      }else{
+                      $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'INGENIERO EN AGROINDUSTRIA ALIMENTARIA'";
+                      }
+                    break;
+                  case '07773':
+                      $carrera='0777';
+                     if ($query=="") {
+                        $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'INGENIERO EN ADMINISTRACION DE AGRONEGOCIOS'";
+                      }else{
+                      $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'INGENIERO EN ADMINISTRACION DE AGRONEGOCIOS'";
+                      }
+                    break;
+                  case '07774':
+                      $carrera='0777';
+                     if ($query=="") {
+                        $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'INGENIERO EN AMBIENTE Y DESARROLLO'";
+                      }else{
+                      $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'INGENIERO EN AMBIENTE Y DESARROLLO'";
+                      }
+                    break;
+                  case '077721':
+                      $carrera='0777';
+                     if ($query=="") {
+                        $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'AGROINDUSTRIA'";
+                      }else{
+                      $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'AGROINDUSTRIA'";
+                      }
+                    break;
+                  case '077731':
+                      $carrera='0777';
+                     if ($query=="") {
+                        $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'GESTION DE AGRONEGOCIOS'";
+                      }else{
+                      $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'GESTION DE AGRONEGOCIOS'";
+                      }
+                    break;
+                  case '077741':
+                      $carrera='0777';
+                     if ($query=="") {
+                        $query= $query." programa LIKE '%".$carrera."%' AND orientacion LIKE 'DESARROLLO SOCIOECONOMICO Y AMBIENTE'";
+                      }else{
+                      $query= $query." AND programa LIKE '%".$carrera."%' AND orientacion LIKE 'DESARROLLO SOCIOECONOMICO Y AMBIENTE'";
+                      }
+                    break;
+                    default:
+                     $carrera=$value;
+                      if ($query=="") {
+                          $query= $query." programa LIKE '%".$carrera."%'";
+                        }else{
+                        $query= $query." AND programa LIKE '%".$carrera."%'";
+                        }
+                      break;
 
 
-      }
+                }
 
 
 
@@ -143,25 +143,11 @@ if(empty($_GET))
                 $query= $query." AND genero LIKE '%".$value."%'";
                 }
             break;
-            case 'direccionInput':
-                if ($query=="") {
-                  $query= $query." direccion LIKE '%".$value."%'";
-                }else{
-                $query= $query." AND direccion LIKE '%".$value."%'";
-                }
-            break;
-            case 'ubicacionInput':
-                if ($query=="") {
-                  $query= $query." ubicacion LIKE '%".$value."%'";
-                }else{
-                $query= $query." AND ubicacion LIKE '%".$value."%'";
-                }
-            break;
             case 'cumpleanosInput':
                 if ($query=="") {
-                  $query= $query." cumpleanos LIKE '%".$value."%'";
+                  $query= $query." fecha_nacimiento LIKE '____-".$value."-__'";
                 }else{
-                $query= $query." AND cumpleanos LIKE '%".$value."%'";
+                $query= $query." AND fecha_nacimiento LIKE '____-".$value."-__'";
                 }
             break;
         }
@@ -169,7 +155,6 @@ if(empty($_GET))
 }
 
 // $sql = "SELECT * FROM `graduat3s` WHERE `codigo`=9078 AND `nombres`=\'SINDY PAOLY\' AND `apellidos`=\'PALMA BARRIENTOS\' AND `clase`=2009 AND `programa`=0777 AND `nacionalidad`=\'HONDURAS\' AND `genero`=\'F\'";
-
 
       $busqueda="SELECT * FROM graduat3s WHERE ".$query;
 
